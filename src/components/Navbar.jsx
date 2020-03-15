@@ -9,7 +9,7 @@ export const Navbar = () => {
             <div className="navbar-brand">
                 ToDo App
             </div>
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ">
                 {isAuth 
                     ? (
                     <React.Fragment>

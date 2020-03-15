@@ -18,6 +18,11 @@ code {
   text-decoration: line-through;
 }
 
-.jsclose {
-  z-index: 999;
+.navbar-nav { 
+  display: inline-block;
+}
+
+.navbar-nav>li { 
+  display: inline-block;
+  margin-left: 1rem;
 }
