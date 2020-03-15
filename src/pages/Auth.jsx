@@ -12,18 +12,18 @@ export const Auth = () => {
 
     const validationForm = (email, password) => {
         if (!email.trim()) {
-            alert.show('Введите email', 'danger')
+            alert.show('Input email', 'danger')
         }
         if (!validateEmail(email)) {
-            alert.show('Введите корректный email', 'danger')
+            alert.show('Input correct email', 'danger')
             return false
         }
         if (!password.trim()) {
-            alert.show('Введите пароль', 'danger')
+            alert.show('Input password', 'danger')
             return false
         }
         if (!(password.trim().length > 5)) {
-            alert.show('Пароль должен быть больше 5 символов', 'danger')
+            alert.show('Password must be more than 6 characters', 'danger')
             return false
         }
         return true
@@ -37,13 +37,10 @@ export const Auth = () => {
         authFirebase(email, password, isRegistation)
             .then(() => {
                 if (isRegistation){
-                    alert.show('Вы успешно зарегистрировались', 'success')
+                    alert.show('You have successfully registered', 'success')
                 }else{
-                    alert.show('Вы успешно авторизовались', 'success')
-                }
-                // setEmail('')
-                // setPassword('')
-                
+                    alert.show('You have successfully logged in', 'success')
+                }               
             })
             .catch((e) =>{
                 alert.show(e.message, 'danger')
